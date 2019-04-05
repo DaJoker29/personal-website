@@ -28,7 +28,7 @@ html {
 }
 
 body {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 h1,
@@ -118,4 +118,38 @@ small {
 
 .nav > a {
   text-align: center;
+}
+
+.clients > article {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clients > article > header {
+  flex: 1;
+  font-size: var(--h2);
+  text-align: right;
+}
+
+.clients > article > main {
+  flex: 1;
+}
+
+.clients > article > header > a[href*="http"]::after {
+  content: none;
+}
+
+.clients > article > header > a {
+  border-bottom: 0;
+}
+
+.clients > article:nth-child(odd) > main {
+  order: -1;
+  text-align: right;
+}
+
+.clients > article:nth-child(odd) > header {
+  text-align: left;
 }
