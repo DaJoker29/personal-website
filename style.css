@@ -1,8 +1,8 @@
 :root {
-  --black: #000;
-  --white: #efe;
-  --green: #4dff4c;
-  --red: #ff4c4c;
+  --black: #00000a;
+  --white: #ccc;
+  --green: #4dcc4c;
+  --red: #cc4c4c;
 
   --open-sans: 'Open Sans', sans-serif;
   --proza-libre: 'Proza Libre', sans-serif;
@@ -15,6 +15,8 @@
   --spacing: 2rem;
   --spacing-half: calc(var(--spacing) / 2);
   --spacing-double: calc(var(--spacing) * 2);
+
+  --container-width: 55rem;
 }
 
 html {
@@ -39,7 +41,7 @@ h4 {
 
 h1 {
   font-size: var(--h1);
-  line-height: 1.1;
+  line-height: 1.2;
   letter-spacing: -3px;
 }
 
@@ -77,14 +79,21 @@ a[href*="http"]::after {
 }
 
 main {
+  margin: var(--spacing) 0;
+}
+
+p,
+small {
   margin: var(--spacing);
 }
 
-/* Site Header */
-
-.site-header {
+.container {
+  max-width: var(--container-width);
+  margin: auto;
   padding: var(--spacing);
 }
+
+/* Site Header */
 
 .site-header > small {
   font-style: italic;
@@ -93,8 +102,8 @@ main {
 }
 
 .site-header > h1 {
-  text-align: center;
-  margin-top: var(--spacing-half);
+  margin: var(--spacing-half) 0;
+  padding: 0 var(--spacing-double);
   color: var(--green);
 }
 
@@ -109,9 +118,4 @@ main {
 
 .nav > a {
   text-align: center;
-}
-
-/* Intro text */
-.intro {
-  margin: var(--spacing);
 }
