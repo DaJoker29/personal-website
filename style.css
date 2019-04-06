@@ -87,6 +87,12 @@ small {
   margin: var(--spacing);
 }
 
+fieldset {
+  padding: var(--spacing-half);
+  margin: var(--spacing);
+  border-width: 0;
+}
+
 .container {
   max-width: var(--container-width);
   margin: auto;
@@ -152,4 +158,42 @@ small {
 
 .clients > article:nth-child(odd) > header {
   text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  line-height: 1.5;
+}
+
+.contact-form .form-control {
+  border: 1px solid;
+  padding: var(--spacing-half);
+  margin-bottom: var(--spacing);
+  background-color: transparent;
+  resize: none;
+  color: var(--white);
+  min-width: 100%;
+}
+
+.contact-form .req {
+  color: var(--red);
+}
+
+.contact-form button {
+  margin-top: var(--spacing);
+  margin-bottom: var(--spacing-double);
+  background-color: var(--red);
+  color: var(--white);
+  border: none;
+  padding: var(--spacing-half) var(--spacing);
+  font-size: var(--h3);
+  transition: all .3s ease;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover,
+.contact-form button:focus {
+  background-color: var(--green);
+  color: var(--black);
 }
