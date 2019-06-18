@@ -40,6 +40,7 @@ h3,
 h4 {
   font-family: var(--proza-libre);
   font-weight: 900;
+  text-align: inherit;
 }
 
 h1 {
@@ -109,10 +110,36 @@ h2 {
   animation-duration: 2s;
 }
 
+.intro {
+  text-align: right;
+}
+
+.clients {
+  text-align: left;
+}
+
+.contact > h2 {
+  text-align: center;
+}
+
 .container {
-  max-width: var(--container-width);
   margin: auto;
   padding: var(--spacing);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.intro,
+.clients {
+  display: inline-block;
+  max-width: var(--container-width);
+  flex: 1 0 100%;
+}
+
+.contact,
+.site-footer {
+  flex-basis: 100%;
 }
 
 /* Site Header */
@@ -142,38 +169,13 @@ h2 {
   text-align: center;
 }
 
-.clients > article {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .clients > article > header {
-  flex: 1;
   font-size: var(--h2);
-  text-align: right;
 }
 
-.clients > article > main {
-  flex: 1;
-}
-
-.clients > article > header > a[href*="http"]::after {
-  content: none;
-}
-
-.clients > article > header > a {
-  border-bottom: 0;
-}
-
-.clients > article:nth-child(odd) > main {
-  order: -1;
-  text-align: right;
-}
-
-.clients > article:nth-child(odd) > header {
-  text-align: left;
+.contact-form {
+  max-width: var(--container-width);
+  margin: 0 auto;
 }
 
 .contact-form label {
@@ -196,6 +198,8 @@ h2 {
 }
 
 .contact-form button {
+  display: block;
+  width: 100%;
   margin-top: var(--spacing);
   margin-bottom: var(--spacing-double);
   background-color: var(--red);
